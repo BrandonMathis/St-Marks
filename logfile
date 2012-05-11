@@ -1,0 +1,11 @@
+LOG:  database system was shut down at 2012-05-11 17:43:56 EDT
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "bemathis" does not exist
+FATAL:  database "refinery_database_development" does not exist
+FATAL:  database "refinery_database_test" does not exist
+LOG:  received fast shutdown request
+LOG:  aborting any active transactions
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
