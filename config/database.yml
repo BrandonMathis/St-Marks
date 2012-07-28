@@ -21,6 +21,6 @@ production:
   encoding: unicode
   database: refinery_database_production
   pool: 5
-  username: postgres
-  password: postgres
+  username: bemathis
+  password: 
   min_messages: warning
