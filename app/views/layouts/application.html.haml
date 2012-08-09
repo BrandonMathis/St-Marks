@@ -1,0 +1,14 @@
+!!!html
+=render '/refinery/html_tag'
+=render '/refinery/head'
+=render '/refinery/javascripts'
+
+%body
+  =render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/
+  #page_container
+    %header#header
+      =render '/refinery/header'
+    %section#page
+      =yield
+    %footer
+      =render '/refinery/footer'
