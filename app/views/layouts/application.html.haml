@@ -5,9 +5,12 @@
 
 %body
   =render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/
-  #page_container
+  .navbar.navbar-fixed-top
+    .navbar-inner
+      .container
+        =render '/refinery/header'
+  .container
     %header#header
-      =render '/refinery/header'
     %section#page
       =yield
     %footer
