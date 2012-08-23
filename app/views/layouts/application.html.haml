@@ -9,9 +9,23 @@
     .navbar-inner
       .container
         =render '/refinery/header'
-  .container
-    %header#header
-    %section#page
-      =yield
-    %footer
-      =render '/refinery/footer'
+
+  %header.subhead.jumbotron
+    .container
+      %h1
+        St Marks United Methodist Church
+
+  %section#page.container
+    %section
+      %h2 Whats Happening
+      -5.times do
+        %article
+          %h3=1.sentences
+          =20.sentences + "..."
+
+  %footer.footer
+    .container
+      .quote
+        %i"And let steadfastness have its full effect, that you may be perfect and complete, lacking in nothing." - James 1:4
+      #copy
+        =render '/refinery/footer'
