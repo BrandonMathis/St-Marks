@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120728051823) do
+ActiveRecord::Schema.define(:version => 20120823031730) do
 
   create_table "refinery_blog_categories", :force => true do |t|
     t.string   "title"
@@ -64,6 +64,28 @@ ActiveRecord::Schema.define(:version => 20120728051823) do
   add_index "refinery_blog_posts", ["access_count"], :name => "index_refinery_blog_posts_on_access_count"
   add_index "refinery_blog_posts", ["id"], :name => "index_refinery_blog_posts_on_id"
   add_index "refinery_blog_posts", ["slug"], :name => "index_refinery_blog_posts_on_slug"
+
+  create_table "refinery_image_page_translations", :force => true do |t|
+    t.integer  "refinery_image_page_id"
+    t.string   "locale"
+    t.text     "caption"
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+  end
+
+  add_index "refinery_image_page_translations", ["locale"], :name => "index_refinery_image_page_translations_on_locale"
+  add_index "refinery_image_page_translations", ["refinery_image_page_id"], :name => "index_186c9a170a0ab319c675aa80880ce155d8f47244"
+
+  create_table "refinery_image_pages", :force => true do |t|
+    t.integer "image_id"
+    t.integer "page_id"
+    t.integer "position"
+    t.text    "caption"
+    t.string  "page_type", :default => "page"
+  end
+
+  add_index "refinery_image_pages", ["image_id"], :name => "index_refinery_image_pages_on_image_id"
+  add_index "refinery_image_pages", ["page_id"], :name => "index_refinery_image_pages_on_page_id"
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
