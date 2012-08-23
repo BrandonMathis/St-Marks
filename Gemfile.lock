@@ -86,6 +86,17 @@ GEM
     haml (3.1.7)
     hike (1.2.1)
     i18n (0.6.0)
+    ipsum (2.0.0)
+      ipsum-english (>= 1.1.0)
+      ipsum-french (>= 1.1.0)
+      ipsum-latin (>= 1.1.0)
+    ipsum-core (2.0.0)
+    ipsum-english (1.1.0)
+      ipsum-core (>= 2.0.0)
+    ipsum-french (1.1.0)
+      ipsum-core (>= 2.0.0)
+    ipsum-latin (1.1.0)
+      ipsum-core (>= 2.0.0)
     journey (1.0.4)
     jquery-rails (2.0.3)
       railties (>= 3.1.0, < 5.0)
@@ -239,6 +250,7 @@ DEPENDENCIES
   compass-rails
   factory_girl
   haml
+  ipsum
   jquery-rails
   pg
   quiet_assets

@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.2'
 gem 'pg'
 gem 'thin'
+gem 'ipsum'
 
 group :assets do
   gem 'haml'
