@@ -19,10 +19,11 @@
     %section.row.article-feed
       .span12
         %h2 Whats Happening
-        -5.times do
+        -(1..5).each do |x|
           %article
-            %h3=1.sentences
-            =20.sentences + "..."
+            %h3 Article #{x}
+            .info <b>posted:</b> 1 June 2012 <b>by:</b> Brandon Mathis
+            =10.sentences + "..."
     %section.row.blocks
       .span4
         .block
