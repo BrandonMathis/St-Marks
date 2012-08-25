@@ -4,8 +4,10 @@ gem 'rails', '3.2.2'
 gem 'pg'
 gem 'thin'
 gem 'ipsum'
+gem 'high_voltage'
 
 group :assets do
+  gem 'font-awesome-sass-rails'
   gem 'haml'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'

@@ -15,17 +15,37 @@
       %h1
         St Marks United Methodist Church
 
-  %section#page.container
-    %section
-      %h2 Whats Happening
-      -5.times do
-        %article
-          %h3=1.sentences
-          =20.sentences + "..."
+  #page.container
+    %section.row.article-feed
+      .span12
+        %h2 Whats Happening
+        -5.times do
+          %article
+            %h3=1.sentences
+            =20.sentences + "..."
+    %section.row.blocks
+      .span4
+        .block
+          .medium-icon
+            %i.icon-map-marker
+          %h3 Directions
+          %p Located just north of 440 on Six Forks Rd. You can #{link_to "click here", "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=St+Marks+United+Methodist+Raleigh+NC&aq=&sll=42.003804,-71.46497&sspn=0.880683,1.5271&vpsrc=0&ie=UTF8&hq=St+Marks+United+Methodist&hnear=Raleigh,+Wake,+North+Carolina&t=m&z=12&iwloc=A&cid=4591602867878022475"} to get directions from anywhere
+      .span4
+        .block
+          .medium-icon
+            %i.icon-volume-off
+          %h3 Listen
+          %p Listen to last Sundays Sermon on your computer, phone, or media-enabled device.
+      .span4
+        .block
+          .medium-icon
+            %i.icon-envelope
+          %h3 Subscribe
+          %p Receive our monthly newsletter to keep up with how St Marks is working in the community.
 
   %footer.footer
     .container
       .quote
-        %i"And let steadfastness have its full effect, that you may be perfect and complete, lacking in nothing." - James 1:4
+        %i"And let perseverance have its full effect, that you may be perfect and complete, lacking in nothing." - James 1:4
       #copy
         =render '/refinery/footer'
