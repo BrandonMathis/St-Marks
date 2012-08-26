@@ -2,6 +2,7 @@
 @import "font-awesome"
 @import "variables"
 
+$block-size: 200px
 body
   background-image: url('background.png')
 
@@ -14,6 +15,22 @@ body > header
 section
   margin-top: 20px
   background-color: white
+  .posts
+    padding: 20px
+
+.blocks
+  padding-top: 20px
+  .block
+    height: 300px
+    width: $block-size
+    margin: auto
+  .medium-icon
+    color: white
+    font-size: $medium
+    line-height: $medium
+    height: $block-size
+    text-align: center
+    background: $blue
 
 footer
   position: relative
@@ -27,16 +44,3 @@ footer
   #copy
     position: absolute
     bottom: 0px
-
-.blocks
-  .block
-    height: 300px
-    width: 200px
-    margin: auto
-  .medium-icon
-    color: white
-    font-size: $medium
-    line-height: $medium
-    height: 180px
-    text-align: center
-    background: $blue
