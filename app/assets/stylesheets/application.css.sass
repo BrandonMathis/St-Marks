@@ -1,8 +1,10 @@
 @import "bootstrap"
 @import "font-awesome"
 @import "variables"
+@import "compass"
 
 $block-size: 200px
+$section-spacer: 20px
 body
   background-image: url('background.png')
 
@@ -13,7 +15,8 @@ body > header
   padding: 50px 0px
 
 section
-  margin-top: 20px
+  +box-shadow(black 0 0 3px)
+  margin-top: $section-spacer
   background-color: white
   .posts
     padding: 20px
@@ -38,6 +41,7 @@ footer
   padding: 50px 0px
   color: #C6C6C6
   background-color: #2F2F2F
+  margin-top: $section-spacer
   .quote
     font-size: 17px
     margin: 10px 0px
