@@ -1,13 +1,22 @@
 <%
-  if !!local_assigns[:apply_css] and (classes = menu_branch_css(local_assigns)).any?
+  if !!local_assigns[:apply_css]
+    classes = menu_branch_css(local_assigns) || []
+    # Added for twitter bootstrap dropdowns
+    unless menu_branch.children.blank? || hide_children
+      classes << 'dropdown'
+      a_class = 'dropdown-toggle'
+      a_data = 'dropdown'
+      caret = "<b class='caret'></b>".html_safe
+    end
+    menu_branch_url = (menu_branch.children.present? && !hide_children)? '#' : refinery.url_for(menu_branch.url)
     css = "class='#{classes.join(' ')}'".html_safe
   end
 -%>
 <li<%= ['', css].compact.join(' ').gsub(/\ *$/, '').html_safe %>>
-<%= link_to(menu_branch.title, refinery.url_for(menu_branch.url)) -%>
+  <a href=<%=menu_branch_url%> class=<%=a_class%> data-toggle=<%=a_data%>><%=menu_branch.title%> <%=caret%> </a>
   <% if ( (children = menu_branch.children unless hide_children).present? &&
           (!local_assigns[:menu_levels] || menu_branch.ancestors.length < local_assigns[:menu_levels]) ) -%>
-    <ul class='clearfix'>
+    <ul class='dropdown-menu'>
       <%= render :partial => '/refinery/menu_branch', :collection => children,
                  :locals => {
                    :apply_css => local_assigns[:apply_css],
