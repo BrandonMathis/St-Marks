@@ -1,5 +1,5 @@
-.row
-  %section
+%section
+  .row
     .posts
       %h2 Whats Happening
       -(1..5).each do |x|
@@ -7,8 +7,8 @@
           %h3.title Article #{x}
           .info <b>posted:</b> 1 June 2012 <b>by:</b> Brandon Mathis
           %p.body=10.sentences + "..."
-.row
-  %section.blocks
+%section.blocks
+  .row
     .span4
       .block
         .medium-icon
@@ -27,3 +27,22 @@
           %i.icon-envelope
         %h3 Subscribe
         %p Receive our monthly newsletter to keep up with how St Marks is working in the community.
+  .row
+    .span4
+      .block
+        .medium-icon
+          %i.icon-gift
+        %h3 Presents!
+        %p Get tons of free presents!!
+    .span4
+      .block
+        .medium-icon
+          %i.icon-comments-alt
+        %h3 Talk
+        %p Blah Blah Blah Blah Blah Blah.
+    .span4
+      .block
+        .medium-icon
+          %i.icon-calendar
+        %h3 Calendar
+        %p View our calendar of events and get involved.
