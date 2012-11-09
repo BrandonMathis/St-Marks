@@ -1,0 +1,48 @@
+%section
+  .row
+    .posts
+      %h2 Whats Happening
+      -(1..2).each do |x|
+        %article.post
+          %h3.title Article #{x}
+          .info <b>posted:</b> 1 June 2012 <b>by:</b> Brandon Mathis
+          %p.body=10.sentences + "..."
+%section.blocks
+  .row
+    .span4
+      .block
+        .medium-icon
+          %i.icon-map-marker
+        %h3 Directions
+        %p Located just north of 440 on Six Forks Rd. You can #{link_to "click here", "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=St+Marks+United+Methodist+Raleigh+NC&aq=&sll=42.003804,-71.46497&sspn=0.880683,1.5271&vpsrc=0&ie=UTF8&hq=St+Marks+United+Methodist&hnear=Raleigh,+Wake,+North+Carolina&t=m&z=12&iwloc=A&cid=4591602867878022475"} to get directions from anywhere
+    .span4
+      .block
+        .medium-icon
+          %i.icon-volume-off
+        %h3 Listen
+        %p Listen to last Sundays Sermon on your computer, phone, or media-enabled device.
+    .span4
+      .block
+        .medium-icon
+          %i.icon-envelope
+        %h3 Subscribe
+        %p Receive our monthly newsletter to keep up with how St Marks is working in the community.
+  .row
+    .span4
+      .block
+        .medium-icon
+          %i.icon-gift
+        %h3 Presents!
+        %p Get tons of free presents!!
+    .span4
+      .block
+        .medium-icon
+          %i.icon-comments-alt
+        %h3 Talk
+        %p Blah Blah Blah Blah Blah Blah.
+    .span4
+      .block
+        .medium-icon
+          %i.icon-calendar
+        %h3 Calendar
+        %p View our calendar of events and get involved.
