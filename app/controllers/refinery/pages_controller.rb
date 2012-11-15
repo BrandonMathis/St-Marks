@@ -6,9 +6,14 @@ module Refinery
     # Save whole Page after delivery
     after_filter { |c| c.write_cache? }
 
+    respond_to :html
+
     # This action is usually accessed with the root path, normally '/'
     def home
       render_with_templates?
+      # Rss feeders are greedy. Let's give them every blog post instead of paginating.
+      @posts = Refinery::Blog::Post.recent(5)
+      respond_with @posts
     end
 
     # This action can be accessed normally, or as nested pages.

@@ -1,12 +1,13 @@
-%section
-  .row
-    .posts
+-if @posts
+  %section
+    .row.posts
       %h2 Whats Happening
-      -(1..2).each do |x|
+      -@posts.each do |x|
         %article.post
           %h3.title Article #{x}
           .info <b>posted:</b> 1 June 2012 <b>by:</b> Brandon Mathis
           %p.body=10.sentences + "..."
+
 %section.blocks
   .row
     .span4
