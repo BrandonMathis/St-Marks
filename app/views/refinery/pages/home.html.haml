@@ -2,11 +2,11 @@
   %section
     .row.posts
       %h2 Whats Happening
-      -@posts.each do |x|
+      -@posts.each do |post|
         %article.post
-          %h3.title Article #{x}
-          .info <b>posted:</b> 1 June 2012 <b>by:</b> Brandon Mathis
-          %p.body=10.sentences + "..."
+          %h3.title=post.title
+          .info <b>posted:</b> #{post.published_at.to_date} <b>by:</b> #{post.author}
+          %p.body=post.teaser.html_safe + link_to("read more", blog_post_path(post))
 
 %section.blocks
   .row

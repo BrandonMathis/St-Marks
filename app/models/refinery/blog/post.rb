@@ -36,6 +36,10 @@ module Refinery
 
       self.per_page = Refinery::Blog.posts_per_page
 
+     def teaser
+       custom_teaser.present? ? custom_teaser : body[0,512] + "..."
+     end
+
       def next
         self.class.next(self)
       end
