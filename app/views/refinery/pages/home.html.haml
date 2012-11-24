@@ -3,7 +3,7 @@
     .row.posts
       -@posts.each do |post|
         %article.post
-          %h1.title=post.title
+          %h1.title=link_to post.title, blog_post_path(post)
           .info <b>posted:</b> #{post.published_at.to_date} <b>by:</b> #{post.author}
           %p.body=post.teaser.html_safe
           =link_to("read more", blog_post_path(post))
