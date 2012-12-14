@@ -12,7 +12,11 @@
 
   %header.subhead.jumbotron
     .container
-      %h1#site-title=link_to "St Marks United Methodist Church", '/'
+      .row
+        .span6
+          %h1#site-title=link_to "St Marks United Methodist Church", '/'
+        .span6
+          .cross=image_tag image_path ('cross.png')
 
   #page.container
     =yield
