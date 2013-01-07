@@ -12,13 +12,24 @@ body
 
 body > header
   margin-top: 40px
-  background-color: $purple
   color: white
-  padding: 50px 0px
+  background-color: $purple
+  height: 200px
+  margin-bottom: 50px
+
+#banner
+  z-index: 100
+  height: 350px
+  top: 0
+  background: url('banner.png') no-repeat center -70px
+  #methodist-logo
+    float: right
+    margin-top: 25px
+    margin-right: 50px
 
 section.main
   +box-shadow(black 0 0 3px)
-  margin-top: $section-spacer
+  margin-top: 35px
   background-color: white
   .posts,
   #blog_post
@@ -28,14 +39,21 @@ section.main
 h1.title a
   color: black
 
-h1#site-title
+#site-title
   margin-top: 69px
+  margin-left: 70px
+  font-size: 21px
+  .name
+    margin: 5px 2px
+    font-size: 60px
+    line-height: 1em
   a
     font-style: none 
     color: white
 
 .cross
-  +background-image(radial-gradient(50px 60px, #fff 1px, #72166b 30px))
+  // +background-image(radial-gradient(50px 60px, #fff 1px, #6aab64 30px))
+  margin-top: 20px
   margin-right: 130px
   float: right
 
