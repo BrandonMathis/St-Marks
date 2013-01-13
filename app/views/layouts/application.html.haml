@@ -9,20 +9,10 @@
     .navbar-inner
       .container
         =render '/refinery/header'
-
-  %header.subhead.jumbotron
-    #banner
-      .container
-        .row
-          .span6
-            #site-title
-              .name=link_to "St Marks", '/'
-              United Methodist Church
-          .span6
-            .cross=image_tag image_path ('methodist.png')
-
-  #page.container
-    =yield
+  .container
+    %header
+    %section#main.container
+      =yield
 
   %footer.footer
     .container

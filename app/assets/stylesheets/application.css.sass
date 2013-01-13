@@ -7,54 +7,38 @@
 
 $block-size: 200px
 $section-spacer: 20px
+$site-width: 1280px
 body
   background-image: url('background.png')
 
-body > header
+
+body > .container
+  width: $site-width
+  margin-top: 70px
+
+.container > header
+  z-index: -1
+  height: 400px
   color: white
   background-color: $purple
-  height: 200px
   margin-bottom: 50px
 
-#banner
-  z-index: 100
-  height: 350px
-  top: 0
-  background: url('banner.png') no-repeat center -70px
-  #methodist-logo
-    float: right
-    margin-top: 25px
-    margin-right: 50px
-
-section.main
-  +box-shadow(black 0 0 3px)
-  margin-top: 35px
+section#main
+  +border-radius(5px)
   background-color: white
-  .posts,
-  #blog_post
+  margin-top: -130px
+  width: 1100px
+  .posts, .nav-buttons
     padding: 20px
-    margin-left: 20px
+  aside.nav-buttons > ul > li
+    height: 50px
+    list-style: none
+    padding: 10px
+    button
+      height: 50px
 
 h1.title a
   color: black
-
-#site-title
-  margin-top: 80px
-  margin-left: 70px
-  font-size: 21px
-  .name
-    margin: 5px 2px
-    font-size: 60px
-    line-height: 1em
-  a
-    font-style: none 
-    color: white
-
-.cross
-  // +background-image(radial-gradient(50px 60px, #fff 1px, #6aab64 30px))
-  margin-top: 50px
-  margin-right: 130px
-  float: right
 
 article.post
   padding-bottom: 15px
@@ -78,7 +62,6 @@ article.post
     background: $blue
 
 footer
-  position: relative
   border-top: 10px black
   padding: 50px 0px
   color: #C6C6C6
@@ -87,9 +70,6 @@ footer
   .quote
     font-size: 17px
     margin: 10px 0px
-  #copy
-    position: absolute
-    bottom: 0px
 
 section #body
   padding: 10px
