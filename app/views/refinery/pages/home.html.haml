@@ -9,11 +9,11 @@
           =link_to("read more", blog_post_path(post))
   %aside.span4.nav-buttons
     %ul
-      %li=button_tag "Item 1", class: 'btn btn-block btn-primary'
-      %li=button_tag "Item 2", class: 'btn btn-block btn-info'
-      %li=button_tag "Item 3", class: 'btn btn-block btn-success'
-      %li=button_tag "Item 4", class: 'btn btn-block btn-warning'
-      %li=button_tag "Item 5", class: 'btn btn-block btn-danger'
+      %li=button_tag "<i class='icon-download-alt icon-white'></i>".html_safe + " Sermon from #{previous_sunday}", class: 'btn btn-block btn-primary'
+      %li=button_tag "Upcoming Events", class: 'btn btn-block btn-info'
+      %li=button_tag "Contact", class: 'btn btn-block btn-success'
+      %li=button_tag "New Member Information", class: 'btn btn-block btn-warning'
+      %li=button_tag "Online Giving", class: 'btn btn-block btn-danger'
 
 .row-fluid.blocks
   .span12
@@ -34,14 +34,14 @@
         .block
           .medium-icon
             %i.icon-envelope
-          %h3 Subscribe
+          %h3 Newsletter
           %p Receive our monthly newsletter to keep up with how St Marks is working in the community.
     .row
       .span4
         .block
           .medium-icon
             %i.icon-gift
-          %h3 Presents!
+          %h3 Online Giving
           %p Get tons of free presents!!
       .span4
         .block

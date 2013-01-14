@@ -25,17 +25,23 @@ body > .container
 
 section#main
   +border-radius(5px)
+  border: solid 1px
   background-color: white
   margin-top: -130px
   width: 1100px
   .posts, .nav-buttons
     padding: 20px
-  aside.nav-buttons > ul > li
-    height: 50px
-    list-style: none
-    padding: 10px
-    button
+  aside.nav-buttons 
+    +border-radius(5px)
+    background: rgb(70, 70, 70)
+    margin: 10px
+    > ul > li
       height: 50px
+      list-style: none
+      padding: 10px
+      button
+        height: 50px
+        font-size: 20px
 
 h1.title a
   color: black
@@ -52,6 +58,8 @@ article.post
   .block
     width: $block-size
     margin: auto
+    h3
+      line-height: 1em
   .medium-icon
     +box-shadow(black 0 0 20px)
     color: white

@@ -5,10 +5,17 @@
 
 %body
   =render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/
-  .navbar.navbar-fixed-top
+  .navbar.navbar-inverse.navbar-fixed-top
     .navbar-inner
       .container
         =render '/refinery/header'
+        %form.navbar-search.pull-left
+          %input.search-query.span2{:type=>'text', :placeholder => "Search"}
+        %ul.nav.pull-right
+          %li
+            =link_to "<i class='icon-twitter-sign'></i>".html_safe + " Twitter", "#"
+          %li
+            =link_to  "<i class='icon-facebook-sign'></i>".html_safe + " Facbook", "#"
   .container
     %header
     %section#main.container
