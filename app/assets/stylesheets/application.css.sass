@@ -4,13 +4,12 @@
 @import "compass"
 @import "admin"
 @import "html"
+@import "front"
 
-$block-size: 200px
-$section-spacer: 20px
 $site-width: 1280px
+
 body
   background-image: url('background.png')
-
 
 body > .container
   width: $site-width
@@ -23,27 +22,11 @@ body > .container
   background-color: $purple
   margin-bottom: 50px
 
-section#main
-  +border-radius(5px)
-  border: solid 1px
-  background-color: white
-  margin-top: -130px
-  width: 1100px
-  .posts, .nav-buttons
-    padding: 20px
-  aside.nav-buttons 
-    +border-radius(5px)
-    background: rgb(70, 70, 70)
-    margin: 10px
-    > ul 
-      margin: 0px
-      > li
-        height: 50px
-        list-style: none
-        padding: 10px
-        button
-          height: 50px
-          font-size: 20px
+#body_content
+  margin: 5px 10px
+
+#main > *
+  margin: 10px 15px
 
 h1.title a
   color: black
@@ -54,32 +37,6 @@ article.post
   margin-bottom: 15px
   > .title
     margin: 0px
-
-.blocks
-  padding-top: 20px
-  .block
-    width: $block-size
-    margin: auto
-    h3
-      line-height: 1em
-  .medium-icon
-    +box-shadow(black 0 0 20px)
-    color: white
-    font-size: $medium
-    line-height: $medium
-    height: $block-size
-    text-align: center
-    background: $blue
-
-footer
-  border-top: 10px black
-  padding: 50px 0px
-  color: #C6C6C6
-  background-color: #2F2F2F
-  margin-top: $section-spacer
-  .quote
-    font-size: 17px
-    margin: 10px 0px
 
 section #body
   padding: 10px
