@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails', '3.2.10'
 gem 'pg'
 gem 'thin'
 gem 'ipsum'
 gem 'high_voltage'
+gem 'rack', '1.4.1'
 
 group :assets do
   gem 'font-awesome-sass-rails'
