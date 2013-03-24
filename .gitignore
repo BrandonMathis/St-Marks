@@ -50,20 +50,6 @@ refinerycms-*.gem
 # Mac
 .DS_Store
 
-# Windows
-Thumbs.db
-
-# NetBeans
-nbproject
-
-# Eclipse
-.project
-
-# Redcar
-.redcar
-
-# Rubinius
-*.rbc
 
 # Vim
 *.swp
@@ -85,8 +71,5 @@ capybara-*html
 .sass-cache
 .sass-cache/*
 
-#rvm
-.rvmrc
-.rvmrc.*
-
 vendor/ruby
+config/database.yml
