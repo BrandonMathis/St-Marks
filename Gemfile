@@ -15,12 +15,14 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'compass-rails'
   gem 'bootstrap-sass'
+  gem 'jquery-rails'
+  gem 'therubyracer'
 end
 
-gem 'jquery-rails'
 group :development do
   gem 'quiet_assets'
   gem 'awesome_print'
+  gem 'capistrano'
 end
 
 group :test do
