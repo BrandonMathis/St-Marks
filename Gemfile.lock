@@ -1,11 +1,3 @@
-GIT
-  remote: git://github.com/resolve/refinerycms-search.git
-  revision: 004f63b0d9b0f833a3cbb35fc08086921882af17
-  branch: 2-0-stable
-  specs:
-    refinerycms-search (2.0.0)
-      refinerycms-core (~> 2.0.4)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -266,7 +258,6 @@ DEPENDENCIES
   refinerycms-blog (~> 2.0.0)
   refinerycms-i18n (~> 2.0.0)
   refinerycms-page-images (~> 2.0.0)
-  refinerycms-search (~> 2.0.0)!
   rspec-rails
   sass-rails (~> 3.2.3)
   thin
