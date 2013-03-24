@@ -44,7 +44,7 @@ end
 after "deploy:restart", "deploy:cleanup"
 
 set :rails_env, :production
-set :unicorn_binary, "bundle exec unicorn"
+set :unicorn_binary, "bundle exec unicorn_rails"
 set :unicorn_config, "#{current_path}/config/unicorn.rb"
 set :unicorn_pid, "#{current_path}/tmp/pids/unicorn.pid"
 
@@ -62,7 +62,7 @@ namespace :deploy do
     run "kill -s USR2 `cat #{unicorn_pid}`"
   end
   task :restart, :roles => :app, :except => { :no_release => true } do
-    # stop
-    # start
+    stop
+    start
   end
 end

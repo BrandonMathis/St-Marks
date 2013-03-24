@@ -1,6 +1,6 @@
 # Sample verbose configuration file for Unicorn (not Rack)
 #
-APP_PATH = "/var/www/stmarks"
+APP_PATH = "/var/www/stmarks/current"
 
 # This configuration file documents many features of Unicorn
 # that may not be needed for some applications. See
@@ -34,7 +34,7 @@ listen 8080, :tcp_nopush => true
 timeout 30
 
 # feel free to point this anywhere accessible on the filesystem
-pid APP_PATH + "/tmp/pid/unicorn.pid"
+pid APP_PATH + "/tmp/pids/unicorn.pid"
 
 # By default, the Unicorn logger will write to stderr.
 # Additionally, ome applications/frameworks log to stderr or stdout,
