@@ -21,7 +21,7 @@ set :ssh_options, { :forward_agent => true }
 
 default_run_options[:pty] = true
 
-set :deploy_to, '/var/www/errbit'
+set :deploy_to, '/var/www/stmarks'
 set :deploy_via, :remote_cache
 set :copy_cache, true
 set :copy_exclude, [".git"]
@@ -31,6 +31,15 @@ set :scm, :git
 set :scm_verbose, true
 set(:current_branch) { `git branch`.match(/\* (\S+)\s/m)[1] || raise("Couldn't determine current branch") }
 set :branch, defer { current_branch }
+
+after 'deploy:finalize_update', 'deploy:make_links'
+
+namespace :deploy do
+  desc 'Symlinks the database.yml'
+  task :make_links, roles: :app do
+    run "ln -nfs #{shared_path}/database.yml #{release_path}/config/database.yml"
+  end
+end
 
 after "deploy:restart", "deploy:cleanup"
 

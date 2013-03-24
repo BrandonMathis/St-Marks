@@ -6,6 +6,7 @@ gem 'thin'
 gem 'ipsum'
 gem 'high_voltage'
 gem 'rack', '1.4.1'
+gem 'unicorn'
 
 group :assets do
   gem 'font-awesome-sass-rails'
