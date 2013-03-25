@@ -1,3 +1,14 @@
 <article class='page'>
-  <%= render '/refinery/content_page' %>
+  <div class='row-fluid'>
+    <div class='span9'>
+      <%= render '/refinery/content_page' %>
+    </div>
+    <div class='span3'>
+      <ul id='sidebar_nav' class='nav nav-pills nav-stacked'>
+        <% @page.children.each do |child| %>
+          <li class='active'><%=link_to child.title, child.url_normal%></li>
+        <%end%>
+      </ul>
+    </div>
+  </div>
 </article>
