@@ -20,7 +20,7 @@
       <%= render :partial => '/refinery/menu_branch', :collection => children,
                  :locals => {
                    :apply_css => local_assigns[:apply_css],
-                   :hide_children => !!hide_children,
+                   :hide_children => true,
                    :menu_levels => local_assigns[:menu_levels]
                  } -%>
     </ul>
