@@ -9,14 +9,14 @@ gem 'rack', '1.4.1'
 gem 'unicorn'
 
 group :assets do
+  gem 'jquery-rails'
   gem 'font-awesome-sass-rails'
-  gem 'haml'
+  gem 'haml-rails'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
   gem 'compass-rails'
   gem 'bootstrap-sass'
-  gem 'jquery-rails'
   gem 'therubyracer'
 end
 
