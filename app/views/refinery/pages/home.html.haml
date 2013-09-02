@@ -1,12 +1,16 @@
 .row-fluid
   -if @posts
     %section.posts.span8
-      -@posts.each do |post|
-        %article.post
-          %h1.title=link_to post.title, blog_post_path(post)
-          .info <b>posted:</b> #{post.published_at.to_date} <b>by:</b> #{post.author}
-          %p.body=post.teaser.html_safe
-          =link_to("read more", blog_post_path(post))
+      %table.table.table-striped
+        -@posts.each do |post|
+          %tr.post
+            %td.image
+              %i.icon-file-text-alt
+            %td
+              %article
+                %h3.title=link_to post.title, blog_post_path(post)
+                .info <b>posted:</b> #{post.published_at.to_date} <b>by:</b> #{post.author}
+                %p.body=sanitize post.teaser, tags: %w(<br> <p>)
   %aside.span4.nav-buttons
     %ul
       %li=button_tag "<i class='icon-download-alt icon-white'></i>".html_safe + " Sermon from #{previous_sunday}", class: 'btn btn-block btn-primary'
