@@ -10,8 +10,12 @@
             <li class='active'><%=link_to child.title, child.url_normal%></li>
           <%end%>
         <% else %>
-          <% @page.siblings.each do |child| %>
-            <li class='active'><%=link_to child.title, child.url_normal%></li>
+          <% @page.parent.children.each do |page| %>
+            <% if url_for(page.url_normal) == request.fullpath %>
+              <li class='active'><%=link_to page.title, page.url_normal%></li>
+            <% else %>
+              <li><%=link_to page.title, page.url_normal%></li>
+            <% end %>
           <% end %>
         <% end %>
       </ul>
