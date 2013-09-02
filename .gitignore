@@ -73,3 +73,4 @@ capybara-*html
 
 vendor/ruby
 config/database.yml
+bin/
