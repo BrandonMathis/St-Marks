@@ -5,9 +5,15 @@
     </div>
     <div class='span3'>
       <ul id='sidebar_nav' class='nav nav-pills nav-stacked'>
-        <% @page.children.each do |child| %>
-          <li class='active'><%=link_to child.title, child.url_normal%></li>
-        <%end%>
+        <% if @page.children.present? %>
+          <% @page.children.each do |child| %>
+            <li class='active'><%=link_to child.title, child.url_normal%></li>
+          <%end%>
+        <% else %>
+          <% @page.siblings.each do |child| %>
+            <li class='active'><%=link_to child.title, child.url_normal%></li>
+          <% end %>
+        <% end %>
       </ul>
     </div>
   </div>
