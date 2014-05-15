@@ -24,6 +24,7 @@ group :development do
   gem 'quiet_assets'
   gem 'awesome_print'
   gem 'capistrano'
+  gem 'capistrano-rbenv'
 end
 
 group :test do

@@ -1,9 +1,8 @@
 load 'deploy/assets'
 require 'bundler/capistrano'
+require "capistrano-rbenv"
 
-set :default_environment, {
-  'PATH' => "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH"
-}
+set :rbenv_ruby_version, "2.1.0"
 
 set :application, "stmarks"
 set :repository,  "git://github.com/BrandonMathis/St-Marks.git"
